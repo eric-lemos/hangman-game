@@ -13,8 +13,17 @@
 ## Como funciona?
 <img align="right" width="142" src="hanged.gif?raw=true" alt="" />
 
-O jogo da forca é um jogo em que o jogador tem que acertar qual é a palavra proposta, tendo como dica o número de letras e o tema ligado à palavra. A cada letra errada, é desenhado uma parte do corpo do enforcado. O jogo termina ou com o acerto da palavra ou com o término do preenchimento das partes corpóreas do enforcado.
+O jogo da forca é um jogo em que o jogador tem que acertar qual é a palavra proposta, tendo como dica o número de letras e o tema ligado à palavra. A cada letra errada, é desenhado uma parte do corpo do enforcado.
 
+Vejamos o exemplos a seguir:
+
+A palavra sorteada para ser adivinhada foi **ALURA**. <br />
+Para iniciar, devemos colocar 5 traços (___ ___ ___ ___ ___). 
+
+Em seguida, o jogador deve adivinhar a palavra sorteada informando uma letra (ex.: letra A). <br />
+Se a letra existir, a posição do traço deve ser preenchido correspondentemente (A ___ ___ ___ A) .
+
+O jogo termina ou com o acerto da palavra ou com o término do preenchimento das partes corpóreas do enforcado.
 
 ## Requisitos
 - Deve funcionar só com letras maiúsculas;
