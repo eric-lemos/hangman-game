@@ -1,5 +1,6 @@
 ![](demo.png?raw=true)
-<p align="center">Envie mensagens em segredo que só você e seu amigo vão conseguir entender! 🚀</p>
+
+<p align="center">Jogue o Jogo da Forca, adivinhe a palavra oculta ou seja enforcado! ☠️</p>
 
 <div align="center">
 
