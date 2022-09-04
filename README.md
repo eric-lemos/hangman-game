@@ -1,4 +1,4 @@
-<img align="center" src="demo.png?raw=true" alt="Prévia do Aplicativo" />
+<img align="center" src="demo.png?raw=true" alt="Prévia do Jogo da Forca" />
 <p align="center">Jogue o Jogo da Forca, adivinhe a palavra oculta ou seja enforcado! ☠️</p>
 
 <div align="center">
