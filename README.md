@@ -1,5 +1,4 @@
-![](demo.png?raw=true)
-
+<img align="center" src="demo.png?raw=true" alt="Prévia do Aplicativo" />
 <p align="center">Jogue o Jogo da Forca, adivinhe a palavra oculta ou seja enforcado! ☠️</p>
 
 <div align="center">
@@ -12,7 +11,18 @@
 </div>
 
 ## Como funciona?
+<img align="right" width="142" src="hanged.gif?raw=true" alt="" />
+
 O jogo da forca é um jogo em que o jogador tem que acertar qual é a palavra proposta, tendo como dica o número de letras e o tema ligado à palavra. A cada letra errada, é desenhado uma parte do corpo do enforcado. O jogo termina ou com o acerto da palavra ou com o término do preenchimento das partes corpóreas do enforcado.
 
-## Requisitos
 
+## Requisitos
+- Deve funcionar só com letras maiúsculas;
+- Não devem ser utilizadas letras com acentos nem caracteres especiais;
+- Ao completar o desenho da forca, deve ser exibida uma mensagem na tela de "Fim de Jogo";
+- Se completar a palavra correta antes de acabarem as tentativas, deve ser exibida na tela a mensagem "Você Venceu. Parabéns!";
+- A página deve ter os traços indicando cada letra da palavra, separados por espaço;
+- A página deve ter um botão de "Iniciar Jogo" para começar o jogo;
+- Só deve ser possívél escrever letras (os números não serão válidos)
+- As letras erradas devem aparecer na tela, mas não podem aparecer repetidamente;
+- As letras corretas devem ser mostradas na tela acima dos traços, nas posições corretas em relação à palavra.
