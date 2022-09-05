@@ -1,0 +1,63 @@
+/* Defaults */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #e5e5e5;
+    line-height: 24px;
+    color: #495057;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+/* Grid */
+.container {
+    display: grid;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 0 0 auto;
+    padding: 0.75rem 1.5rem;
+}
+
+.break {
+    width: 100%;
+}
+
+/* Common */
+.hide {
+    display: none !important;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.img-responsive {
+    width: calc(100% - 10px);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.bold {
+    font-weight: 700;
+}
