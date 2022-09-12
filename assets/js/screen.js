@@ -15,7 +15,7 @@ export const screen = {
                 // MainMenu
                 case "btnStartGame":
                     screen.set(html.page.mainMenu, html.page.newGame);
-                    game.choose_word();
+                    game.scene_mount();
                     break;
 
                 case "btnAddWord":
@@ -26,12 +26,14 @@ export const screen = {
 
                 // StartGame
                 case "btnStartNewGame":
-                    console.log("Start New Game!");
+                    console.log("Confirm Start New Game!");
+                    game.restart();
                     break;
 
                 case "btnStopCurrentGame":
                     console.log("Confirm Strop Current Game!");
                     screen.set(html.page.newGame, html.page.mainMenu);
+                    game.reset();
                     break;
 
                 // AddWord

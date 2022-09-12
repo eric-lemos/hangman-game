@@ -17,7 +17,12 @@ export const words = {
     },
 
     put: () => {
-        words.dict.push(html.input.addWordInput.value);
+        if (!words.dict.includes(html.input.addWordInput.value)) {
+            words.dict.push(html.input.addWordInput.value);
+        } else {
+            console.log("A palavra já existe, configurar alert pro usuário!");
+        }
+
         helper.focus(html.input.addWordInput);
         html.input.addWordInput.value = "";
         words.get();
