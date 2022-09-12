@@ -9,8 +9,133 @@
 }
 
 /* Main Menu */
-#mainMenu {
+#pageMainMenu {
     height: calc(100vh - 18vh);
+}
+
+/* Add Word */
+#pageAddWord .row {
+    height: 82vh;
+}
+
+#pageAddWord .col {
+    text-align: center;
+}
+
+#pageAddWord .col:first-child {
+    width: 75%;
+}
+
+#pageAddWord .col:last-child {
+    width: 25%;
+}
+
+#pageAddWord label {
+    padding: 0 0 15rem;
+    display: block;
+}
+
+/* #pageAddWord #addWordInput {
+    margin: 0 0 15rem;
+} */
+
+#pageAddWord .btns {
+    margin: 0 auto;
+    display: block;
+    width: 50%;
+}
+
+#pageAddWord #pageNotFound .info,
+#pageAddWord #pageWordFound .info {
+    padding: 1.5rem 0;
+}
+
+#pageAddWord #pageWordFound .info h1 {
+    padding-bottom: 0.5rem;
+}
+
+/* Start Game */
+#pageNewGame .col {
+    width: 100%;
+}
+
+#pageNewGame .canvas {
+    margin: 2.5rem 0;
+}
+
+#pageNewGame .canvas picture {
+    position: relative;
+}
+
+#pageNewGame .canvas img:nth-child(1) {
+    position: absolute;
+    left: 14.95rem;
+    top: -6.9rem;
+}
+#pageNewGame .canvas img:nth-child(2) {
+    position: absolute;
+    left: 12.78rem;
+    top: -6.89rem;
+}
+#pageNewGame .canvas img:nth-child(3) {
+    position: absolute;
+    left: 14.9rem;
+    top: -14.8rem;
+}
+#pageNewGame .canvas img:nth-child(4) {
+    position: absolute;
+    left: 12.8rem;
+    top: -14.8rem;
+}
+#pageNewGame .canvas img:nth-child(5) {
+    position: absolute;
+    left: 14.9rem;
+    top: -15rem;
+}
+#pageNewGame .canvas img:nth-child(6) {
+    position: absolute;
+    left: 13rem;
+    top: -18.7rem;
+}
+#pageNewGame .canvas img:nth-child(7) {
+    position: absolute;
+    left: 14.9rem;
+}
+#pageNewGame .canvas img:nth-child(8) {
+    position: absolute;
+    left: 4rem;
+}
+#pageNewGame .canvas img:nth-child(9) {
+    position: relative;
+    left: 4rem;
+}
+
+#pageNewGame input {
+    border: none;
+    border-bottom: 4px solid #0a3871;
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+    background: transparent;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    line-height: 48px;
+    color: #0a3871;
+    margin-left: 5px;
+    font-size: 32px;
+    width: 50px;
+}
+#pageNewGame input:focus {
+    box-shadow: 0 0 0 0;
+    outline: none;
+}
+
+#pageNewGame .wrong-letters {
+    margin: 0.5rem 0 1.5rem;
+}
+
+#pageNewGame .btns {
+    margin: 0 auto 1.5rem;
+    width: 40%;
 }
 
 /* Footer */
@@ -31,7 +156,7 @@ footer .footer a:visited,
 footer .footer a:active {
     color: #0a3871;
     text-decoration: none;
-    transition: all 1s ease;
+    /* transition: all 1s ease; */
 }
 
 footer .footer a:hover {

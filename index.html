@@ -23,29 +23,98 @@
         </header>
 
         <main>
-            <section id="mainMenu" class="container show">
+            <section id="pageMainMenu" class="container show">
                 <div class="row">
                     <div class="col x-center">
                         <div class="y-center">
-                            <button class="btn dark">Começar a jogar</button>
-                            <button class="btn light">Adicionar nova palavra</button>
+                            <button id="btnStartGame" class="btn btn-lg dark">Começar a jogar</button>
+
+                            <button id="btnAddWord" class="btn btn-lg light">Adicionar nova palavra</button>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section id="addWord" class="container hide">
+            <section id="pageAddWord" class="container hide">
                 <div class="row">
-                    <div class="col x-center">
-                        <div class="y-center"></div>
+                    <div class="col">
+                        <div class="y-center">
+                            <label for="addWordInput">
+                                <input id="addWordInput" class="input" type="text" placeholder="Digite uma palavra" />
+                            </label>
+
+                            <div class="btns">
+                                <p class="warning text-left">Máx. de 8 letras!</p>
+                                <button id="btnSaveWord" class="btn btn-md dark">Adicionar palavra</button>
+                                <button id="btnCancelWord" class="btn btn-md light">Voltar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="box">
+                            <div id="pageNotFound" class="y-center show">
+                                <img class="img-responsive" src="assets/img/no-text.svg" />
+                                <div class="info">
+                                    <h1 class="bold">Nenhuma palavra encontrada</h1>
+                                    <p>Digite uma palavra que você deseja adicionar ao jogo.</p>
+                                </div>
+                            </div>
+                            <div id="pageWordFound" class="hide">
+                                <div class="info">
+                                    <h1 class="bold">Palavras cadastradas</h1>
+                                    <div id="displayWords"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section id="startGame" class="container hide">
+            <section id="pageNewGame" class="container hide">
                 <div class="row">
-                    <div class="col x-center">
-                        <div class="y-center"></div>
+                    <div class="col">
+                        <div class="canvas text-center">
+                            <picture>
+                                <img id="item9" class="show" src="assets/img/game/9.svg" />
+                                <img id="item8" class="show" src="assets/img/game/8.svg" />
+                                <img id="item7" class="show" src="assets/img/game/7.svg" />
+                                <img id="item6" class="show" src="assets/img/game/6.svg" />
+                                <img id="item5" class="show" src="assets/img/game/5.svg" />
+                                <img id="item4" class="show" src="assets/img/game/4.svg" />
+                                <img id="item3" class="show" src="assets/img/game/3.svg" />
+                                <img id="item2" class="show" src="assets/img/game/2.svg" />
+                                <img id="item1" class="show" src="assets/img/game/1.svg" />
+                                <img id="item0" class="show" src="assets/img/game/0.svg" />
+                            </picture>
+                        </div>
+                    </div>
+
+                    <div class="col text-center">
+                        <input type="text" value="A" disabled />
+                        <input type="text" value="B" disabled />
+                        <input type="text" value="C" disabled />
+                        <input type="text" value="D" disabled />
+                        <input type="text" value="E" disabled />
+                        <input type="text" value="F" disabled />
+                        <input type="text" value="G" disabled />
+                        <input type="text" value="H" disabled />
+                    </div>
+
+                    <div class="col text-center">
+                        <div class="wrong-letters">
+                            <span>X</span>
+                            <span>Y</span>
+                            <span>Z</span>
+                            <span>V</span>
+                            <span>U</span>
+                        </div>
+                    </div>
+
+                    <div class="col text-center">
+                        <div class="btns">
+                            <button id="btnStartNewGame" class="btn btn-md dark">Novo jogo</button>
+                            <button id="btnStopCurrentGame" class="btn btn-md light">Desistir</button>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -66,6 +135,6 @@
             </section>
         </footer>
 
-        <script src="assets/js/app.js"></script>
+        <script src="assets/js/app.js" type="module"></script>
     </body>
 </html>
