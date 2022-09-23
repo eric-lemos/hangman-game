@@ -62,10 +62,11 @@ export let game = {
         helper.show(html.modal.alert);
         html.modal.msg.innerHTML = `
             <div>
+                <p>FIM DO JOGO</p>
                 <h3>Parabéns, você acertou!</h3> 
                 <p>A palavra secreta era <strong>${game.secret_word}</strong></p>
             </div>
-            <button id="btnStartNewGame" class="btn btn-md dark">Novo jogo</button>
+            <button id="btnNewGameConfirm" class="btn btn-md dark">Novo jogo</button>
             <button id="btnBackToMainMenu" class="btn btn-md light">Voltar ao Menu</button>
         `;
     },
@@ -74,10 +75,11 @@ export let game = {
         helper.show(html.modal.alert);
         html.modal.msg.innerHTML = `
             <div>
+                <p>FIM DO JOGO</p>
                 <h3>Que pena... você errou!</h3> 
                 <p>A palavra secreta era <strong>${game.secret_word}</strong></p>
             </div>
-            <button id="btnStartNewGame" class="btn btn-md dark">Novo jogo</button>
+            <button id="btnNewGameConfirm" class="btn btn-md dark">Novo jogo</button>
             <button id="btnBackToMainMenu" class="btn btn-md light">Voltar ao Menu</button>
         `;
     },

@@ -22,10 +22,6 @@ export const html = {
         // AddWord
         saveWord: document.getElementById("btnSaveWord"),
         cancelWord: document.getElementById("btnCancelWord"),
-
-        // Modal-Alert
-        backToMainMenu: document.getElementById("btnBackToMainMenu"),
-        modalConfirm: document.getElementById("btnModalConfirm"),
     },
 
     input: {

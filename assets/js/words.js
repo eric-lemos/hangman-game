@@ -3,7 +3,6 @@ import { screen } from "./screen.js";
 import { html } from "./dom.js";
 
 export const words = {
-    is_del: false,
     dict: ["alura", "oracle", "cursos", "git", "github", "html", "css", "emprego"],
 
     get: () => {

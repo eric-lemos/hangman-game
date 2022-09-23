@@ -25,29 +25,16 @@ export const screen = {
 
         // Buttons in NewGame
         html.btn.startNewGame.addEventListener("click", (e) => {
-            if (game.status === "running") {
-                helper.show(html.modal.alert);
-                html.modal.msg.innerHTML = `
-                    <div>
-                        <h3>ATENÇÃO!</h3> 
-                        <p>O seu jogo está em andamento...</p>
-                        <p>Você tem certeza que deseja criar um novo jogo?</p>
-                    </div>
-                    <button id="btnNewGameConfirm" class="btn btn-md dark">Recriar jogo</button>
-                    <button id="btnNewGameCancel" class="btn btn-md light">Continuar no atual</button>
-                `;
-                document.getElementById("btnNewGameConfirm").addEventListener("click", () => {
-                    helper.hide(html.modal.alert);
-                    game.restart();
-                });
-
-                document.getElementById("btnNewGameCancel").addEventListener("click", () => {
-                    helper.hide(html.modal.alert);
-                });
-            } else {
-                helper.hide(html.modal.alert);
-                game.restart();
-            }
+            helper.show(html.modal.alert);
+            html.modal.msg.innerHTML = `
+                <div>
+                    <h3>ATENÇÃO!</h3> 
+                    <p>O seu jogo está em andamento...</p>
+                    <p>Você tem certeza que deseja criar um novo jogo?</p>
+                </div>
+                <button id="btnNewGameConfirm" class="btn btn-md dark">Recriar jogo</button>
+                <button id="btnNewGameCancel" class="btn btn-md light">Continuar no atual</button>
+            `;
         });
 
         html.btn.stopCurrentGame.addEventListener("click", (e) => {
@@ -105,6 +92,15 @@ export const screen = {
             switch (e.composedPath()[0].id) {
                 case "btnBackToMainMenu":
                     screen.set(html.page.newGame, html.page.mainMenu);
+                    helper.hide(html.modal.alert);
+                    break;
+
+                case "btnNewGameConfirm":
+                    helper.hide(html.modal.alert);
+                    game.restart();
+                    break;
+
+                case "btnNewGameCancel":
                     helper.hide(html.modal.alert);
                     break;
 
