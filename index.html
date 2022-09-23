@@ -56,7 +56,7 @@
                                 <img class="img-responsive" src="assets/img/no-text.svg" />
                                 <div class="info">
                                     <h1 class="bold">Nenhuma palavra encontrada</h1>
-                                    <p>Digite uma palavra que você deseja adicionar ao jogo.</p>
+                                    <p>Digite uma palavra que você deseja adicionar no jogo.</p>
                                 </div>
                             </div>
                             <div id="pageWordFound" class="hide">
@@ -75,40 +75,23 @@
                     <div class="col">
                         <div class="canvas text-center">
                             <picture>
-                                <img id="item9" class="show" src="assets/img/game/9.svg" />
-                                <img id="item8" class="show" src="assets/img/game/8.svg" />
-                                <img id="item7" class="show" src="assets/img/game/7.svg" />
-                                <img id="item6" class="show" src="assets/img/game/6.svg" />
-                                <img id="item5" class="show" src="assets/img/game/5.svg" />
-                                <img id="item4" class="show" src="assets/img/game/4.svg" />
-                                <img id="item3" class="show" src="assets/img/game/3.svg" />
-                                <img id="item2" class="show" src="assets/img/game/2.svg" />
-                                <img id="item1" class="show" src="assets/img/game/1.svg" />
-                                <img id="item0" class="show" src="assets/img/game/0.svg" />
+                                <img id="error-6" class="show" src="assets/img/game/9.svg" />
+                                <img id="error-5" class="show" src="assets/img/game/8.svg" />
+                                <img id="error-4" class="show" src="assets/img/game/7.svg" />
+                                <img id="error-3" class="show" src="assets/img/game/6.svg" />
+                                <img id="error-2" class="show" src="assets/img/game/5.svg" />
+                                <img id="error-1" class="show" src="assets/img/game/4.svg" />
+
+                                <img src="assets/img/game/3.svg" />
+                                <img src="assets/img/game/2.svg" />
+                                <img src="assets/img/game/1.svg" />
+                                <img src="assets/img/game/0.svg" />
                             </picture>
                         </div>
                     </div>
 
-                    <div class="col text-center">
-                        <input type="text" value="A" disabled />
-                        <input type="text" value="B" disabled />
-                        <input type="text" value="C" disabled />
-                        <input type="text" value="D" disabled />
-                        <input type="text" value="E" disabled />
-                        <input type="text" value="F" disabled />
-                        <input type="text" value="G" disabled />
-                        <input type="text" value="H" disabled />
-                    </div>
-
-                    <div class="col text-center">
-                        <div class="wrong-letters">
-                            <span>X</span>
-                            <span>Y</span>
-                            <span>Z</span>
-                            <span>V</span>
-                            <span>U</span>
-                        </div>
-                    </div>
+                    <div id="right-letters" class="col text-center"></div>
+                    <div id="wrong-letters" class="col text-center"></div>
 
                     <div class="col text-center">
                         <div class="btns">
@@ -119,6 +102,12 @@
                 </div>
             </section>
         </main>
+
+        <div id="alert" class="modal hide">
+            <div class="text-center">
+                <div id="msg" class="content"></div>
+            </div>
+        </div>
 
         <footer>
             <section class="container footer">

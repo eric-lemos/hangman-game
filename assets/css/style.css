@@ -54,6 +54,21 @@
     padding-bottom: 0.5rem;
 }
 
+#pageAddWord #pageWordFound #displayWords span {
+    display: inline-block;
+    background: #f3f3f3;
+    padding: 2px 5px;
+    margin: 5px 0;
+}
+
+#pageAddWord #pageWordFound #displayWords span img {
+    cursor: pointer;
+    width: 16px;
+    position: relative;
+    top: 3px;
+    left: -2px;
+}
+
 /* Start Game */
 #pageNewGame .col {
     width: 100%;
@@ -65,6 +80,10 @@
 
 #pageNewGame .canvas picture {
     position: relative;
+}
+
+#pageNewGame .canvas .fail {
+    filter: invert(23%) sepia(94%) saturate(6841%) hue-rotate(357deg) brightness(99%) contrast(115%);
 }
 
 #pageNewGame .canvas img:nth-child(1) {
@@ -96,6 +115,7 @@
     position: absolute;
     left: 13rem;
     top: -18.7rem;
+    z-index: 1;
 }
 #pageNewGame .canvas img:nth-child(7) {
     position: absolute;
@@ -129,8 +149,12 @@
     outline: none;
 }
 
-#pageNewGame .wrong-letters {
+#pageNewGame #wrong-letters {
     margin: 0.5rem 0 1.5rem;
+}
+
+#pageNewGame #wrong-letters span {
+    text-transform: uppercase;
 }
 
 #pageNewGame .btns {

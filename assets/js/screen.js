@@ -10,42 +10,106 @@ export const screen = {
     },
 
     controller: () => {
-        addEventListener("click", (event) => {
-            switch (event.path[0].id) {
-                // MainMenu
-                case "btnStartGame":
-                    screen.set(html.page.mainMenu, html.page.newGame);
-                    game.scene_mount();
-                    break;
+        // Buttons in MainMenu
+        html.btn.startGame.addEventListener("click", (e) => {
+            screen.set(html.page.mainMenu, html.page.newGame);
+            game.start();
+        });
 
-                case "btnAddWord":
-                    screen.set(html.page.mainMenu, html.page.addWord.main);
-                    helper.focus(html.input.addWordInput);
-                    words.get();
-                    break;
+        html.btn.addWord.addEventListener("click", (e) => {
+            screen.set(html.page.mainMenu, html.page.addWord.main);
+            helper.focus(html.input.addWordInput);
+            words.get();
+            words.del();
+        });
 
-                // StartGame
-                case "btnStartNewGame":
-                    console.log("Confirm Start New Game!");
+        // Buttons in NewGame
+        html.btn.startNewGame.addEventListener("click", (e) => {
+            if (game.status === "running") {
+                helper.show(html.modal.alert);
+                html.modal.msg.innerHTML = `
+                    <div>
+                        <h3>ATENÇÃO!</h3> 
+                        <p>O seu jogo está em andamento...</p>
+                        <p>Você tem certeza que deseja criar um novo jogo?</p>
+                    </div>
+                    <button id="btnNewGameConfirm" class="btn btn-md dark">Recriar jogo</button>
+                    <button id="btnNewGameCancel" class="btn btn-md light">Continuar no atual</button>
+                `;
+                document.getElementById("btnNewGameConfirm").addEventListener("click", () => {
+                    helper.hide(html.modal.alert);
                     game.restart();
-                    break;
+                });
 
-                case "btnStopCurrentGame":
-                    console.log("Confirm Strop Current Game!");
+                document.getElementById("btnNewGameCancel").addEventListener("click", () => {
+                    helper.hide(html.modal.alert);
+                });
+            } else {
+                helper.hide(html.modal.alert);
+                game.restart();
+            }
+        });
+
+        html.btn.stopCurrentGame.addEventListener("click", (e) => {
+            helper.show(html.modal.alert);
+            html.modal.msg.innerHTML = `
+                <div>
+                    <h3>ATENÇÃO!</h3> 
+                    <p>Você tem certeza que deseja desistir?</p>
+                </div>
+                <button id="btnStopConfirm" class="btn btn-md dark">Desistir</button>
+                <button id="btnStopCancel" class="btn btn-md light">Continuar jogo</button>
+            `;
+
+            document.getElementById("btnStopConfirm").addEventListener("click", () => {
+                screen.set(html.page.newGame, html.page.mainMenu);
+                helper.hide(html.modal.alert);
+                game.reset();
+            });
+
+            document.getElementById("btnStopCancel").addEventListener("click", () => {
+                helper.hide(html.modal.alert);
+            });
+        });
+
+        // Buttons in AddWord
+        html.btn.saveWord.addEventListener("click", (e) => {
+            if (html.input.addWordInput.value.length >= 2 && html.input.addWordInput.value.length <= 8) words.put();
+            else if (html.input.addWordInput.value.length == 0) {
+                helper.show(html.modal.alert);
+                html.modal.msg.innerHTML = `
+                    <div>
+                        <h3>ATENÇÃO!</h3> 
+                        <p>Você precisar digitar uma palavra antes de adicionar-la a lista de palavras cadastradas.</p>
+                    </div>
+                    <button id="btnModalConfirm" class="btn btn-md dark">OK</button>
+                `;
+            } else if (html.input.addWordInput.value.length > 8) {
+                helper.show(html.modal.alert);
+                html.modal.msg.innerHTML = `
+                    <div>
+                        <h3>ATENÇÃO!</h3> 
+                        <p>A palavra digitada tem mais de 8 letras.</p>
+                    </div>
+                    <button id="btnModalConfirm" class="btn btn-md dark">OK</button>
+                `;
+            }
+        });
+
+        html.btn.cancelWord.addEventListener("click", (e) => {
+            screen.set(html.page.addWord.main, html.page.mainMenu);
+        });
+
+        // Buttons in Modal - Alert;
+        document.addEventListener("click", (e) => {
+            switch (e.composedPath()[0].id) {
+                case "btnBackToMainMenu":
                     screen.set(html.page.newGame, html.page.mainMenu);
-                    game.reset();
+                    helper.hide(html.modal.alert);
                     break;
 
-                // AddWord
-                case "btnSaveWord":
-                    if (html.input.addWordInput.value.length >= 2 && html.input.addWordInput.value.length <= 8)
-                        words.put();
-                    else if (html.input.addWordInput.value.length == 0) console.log("Input vazio!");
-                    else if (html.input.addWordInput.value.length > 8) console.log("Input > 8");
-                    break;
-
-                case "btnCancelWord":
-                    screen.set(html.page.addWord.main, html.page.mainMenu);
+                case "btnModalConfirm":
+                    helper.hide(html.modal.alert);
                     break;
             }
         });

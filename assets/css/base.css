@@ -157,6 +157,70 @@ body {
     left: -25px;
 }
 
+/* Alert Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgba(0, 0, 0, 0.99);
+    z-index: 9999;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+}
+
+.modal > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+}
+
+.modal .content > div {
+    margin: 10px 0 30px;
+}
+
+.modal .content h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.modal .content p {
+    font-size: 16px;
+}
+
+.modal .content strong {
+    font-weight: bold;
+    background: #343a40;
+    color: #e5e5e5;
+    padding: 2px 5px;
+}
+
+.modal .btn {
+    height: 36px;
+}
+
+.modal .close {
+    position: absolute;
+    width: 20px;
+    right: -10px;
+    top: -20px;
+    text-align: center;
+    line-height: 20px;
+    margin-top: 10px;
+    background: #ff4545;
+    border-radius: 50%;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
 /* Others */
 .box {
     width: 100%;
@@ -164,7 +228,7 @@ body {
     box-shadow: 0px 24px 32px -8px rgba(0 0 0 / 8%);
     background: #fff;
     border-radius: 32px;
-    padding: 0 3.5rem;
+    padding: 0 1.5rem;
     position: relative;
     right: 25px;
     top: -25px;

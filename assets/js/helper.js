@@ -12,4 +12,8 @@ export const helper = {
     focus: (e) => {
         e.focus();
     },
+
+    normalize: (input) => {
+        return input.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    },
 };
