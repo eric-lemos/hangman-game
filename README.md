@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="demo.png?raw=true" alt="Prévia da Aplicação" /> <br /><br />
+  <img src="demo.PNG?raw=true" alt="Prévia da Aplicação" /> <br /><br />
   Jogue o Jogo da Forca, adivinhe a palavra oculta ou seja enforcado! ☠️ <br /><br />
   
   ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
